@@ -7424,8 +7424,8 @@ a.text-white:hover, a.text-white:focus {
 aside .profile-img-wrapper {
   text-align: center; }
   aside .profile-img-wrapper img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%; }
 
 aside .profile-name {
@@ -8151,5 +8151,9 @@ main {
     transform: rotate3d(0, 0, 0, 0deg); }
   to {
     transform: rotate3d(0, 1, 0, 104deg); } }
-
+.fa-scholar {
+  content: url('assets/images/google-scholar.svg');
+  height: 1em;
+  width: auto;
+}
 /*# sourceMappingURL=live-resume.css.map */
