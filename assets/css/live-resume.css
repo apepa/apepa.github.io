@@ -3721,6 +3721,7 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0.2rem; }
 
 .badge {
+  width:220px;
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -7424,8 +7425,8 @@ a.text-white:hover, a.text-white:focus {
 aside .profile-img-wrapper {
   text-align: center; }
   aside .profile-img-wrapper img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%; }
 
 aside .profile-name {
@@ -7614,9 +7615,12 @@ header {
   @media (max-width: 767px) {
     .content-wrapper {
       flex-direction: column; } }
-
+.twitter-timeline-div{
+  height: 410px;
+  overflow: scroll;
+}
 aside {
-  padding-right: 57px;
+  padding-right: 17px;
   min-width: 240px; }
   @media (max-width: 767px) {
     aside {
@@ -7646,7 +7650,7 @@ main {
     line-height: 1;
     color: #0067f6; }
   main p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.538;
     font-weight: 300; }
   main .intro-section {
