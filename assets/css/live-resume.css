@@ -7430,13 +7430,13 @@ aside .profile-img-wrapper {
     border-radius: 50%; }
 
 aside .profile-name {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   text-align: center;
   line-height: 30px; }
 
 aside .profile-designation {
-  padding: 5px 25px;
+  padding: 5px 26px;
   font-size: 12px;
   line-height: 20px;
   font-weight: 500;
@@ -7519,7 +7519,7 @@ aside .widget {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .btn-download-cv {
-  padding: 6px 30px; }
+  padding: 4px 50px; }
 
 .btn-hire-me {
   font-size: 8px;
@@ -7533,6 +7533,7 @@ header {
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: #f3f3f3;
+  justify-content:flex-end;
   z-index: 1000; }
 
 .collapsible-nav {
@@ -7543,7 +7544,7 @@ header {
   margin-right: 10px;
   transition: width 0.6s ease-in-out; }
   .collapsible-nav.show {
-    width: 365px; }
+    width: 260px; }
   @media (max-width: 991px) {
     .collapsible-nav {
       position: fixed;
@@ -7554,7 +7555,7 @@ header {
       top: 71px;
       align-items: flex-start;
       background-color: #ffffff;
-      margin-right: 0;
+      margin-right: 100;
       padding-left: 24px;
       padding-right: 24px;
       width: 200px;
@@ -7563,7 +7564,8 @@ header {
       box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.08); }
       .collapsible-nav.show {
         transform: translateX(0%);
-        width: 200px; } }
+        width: 200px;
+      } }
   .collapsible-nav .nav-link {
     font-size: 12px;
     font-weight: 600;
@@ -7620,15 +7622,18 @@ header {
   overflow: scroll;
 }
 aside {
-  padding-right: 17px;
-  min-width: 240px; }
+  padding-right: 37px;
+  min-width: 240px;
+  max-width: 240px;
+}
   @media (max-width: 767px) {
     aside {
       width: 100%;
       padding-right: 0; } }
 
 main {
-  flex-grow: 1; }
+  flex-grow: 1;
+}
 
 main {
   padding: 36px 60px 24px;
@@ -7645,10 +7650,12 @@ main {
     text-transform: uppercase;
     margin-bottom: 2.125rem; }
   main .section-subtitle {
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 18px;
     line-height: 1;
-    color: #0067f6; }
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.525rem;
+  margin-top: 0.525rem;}
   main p {
     font-size: 16px;
     line-height: 1.538;
@@ -8159,5 +8166,8 @@ main {
   content: url('/assets/images/google-scholar.svg');
   height: 1em;
   width: auto;
+}
+.space-p{
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=live-resume.css.map */
