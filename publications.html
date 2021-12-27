@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+.filterDiv {
+  float: left;
+  margin: 2px;
+  display: none;
+}
+.show {
+  display: block;
+}
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ddd;
+}
+.btn.active {
+  background-color: #a88e8c;
+  color: white;
+}
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,21 +112,47 @@
 <!--            </div>-->
         </aside>
         <main>
+         <section class="intro-section">
+            <!-- Control buttons -->
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Show All</button>
+              <button class="btn" onclick="filterSelection('selected')"> Selected</button>
+              <button class="btn" onclick="filterSelection('factchecking')"> Fact Checking</button>
+              <button class="btn" onclick="filterSelection('explainability')"> Explainability</button>
+              <button class="btn" onclick="filterSelection('checkworthiness')"> Check-worthiness</button>
+            </div>
+            <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+            <div class="container">
+
+              <div class="filterDiv explainability selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://arxiv.org/abs/2109.03756">Diagnostics-Guided Explanation Generation.</a> In Proceeding sof the Thirty-Sixth AAAI Conference on Artificial Intelligence <a href="https://aaai.org/Conferences/AAAI-22/">(AAAI-2022)</a>, February, 2022</br></div>
+              <div class="filterDiv">Luna De Bruyne, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.sciencedirect.com/science/article/pii/S0885230821000644?casa_token=KKR8DRzz4ToAAAAA:PIVFexBd46e3kG2d9v-9diPyVsD1ZMNQetl0I3mUP8OBJKe0ojxn5ZjC-YDXoFeFoww4ZBZZFA">Joint Emotion Label Space Modelling for Affect Lexica.</a> Computer Speech & Language, <a href="https://www.sciencedirect.com/journal/computer-speech-and-language/vol/71/suppl/C">(volume 71)</a>, January 2022</br></div>
 
 
-            <section class="intro-section">
-                <h2 class="section-title">Selected Publications </h2>
-                <p class="space-p">
-                    <b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://arxiv.org/abs/2109.03756">Diagnostics-Guided Explanation Generation.</a> CoRR, abs/2109.03756, September 2021. </br></p>
-                <p class="space-p">
-                    <b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.emnlp-main.263/">A Diagnostic Study of Explainability Techniques for Text Classification.</a> In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP 2020</a>), November 2020. <a href="https://github.com/copenlu/xai-benchmark">[Code]</a> </br></p>
-                <p class="space-p">
-                    <b>Pepa Atanasova</b><sup>*</sup>, Dustin Wright<sup>*</sup>, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.emnlp-main.256/">Generating Label Cohesive and Well-Formed Adversarial Claims</a>. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP 2020</a>), November 2020. <a href="https://github.com/copenlu/fever-adversarial-attacks">[Code]</a> </br></p>
-                <p class="space-p">
-                    <b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.acl-main.656/">Generating Fact Checking Explanations.</a> In Proceedings of 2020 Annual Conference of the Association for Computational Linguistics (<a href="https://acl2020.org/">ACL 2020</a>), July 2020. <a href="http://slideslive.com/38929094">[Video]</a> </br></p>
-                <p class="space-p">
-                    <b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Ivan Koychev. <a href="https://aclanthology.org/R17-1037/">A context-aware approach for detecting worth-checking claims in political debates</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">RANLP 2017</a>. </br>
-                </p>
+              <div class="filterDiv factchecking explainability">Shailza Jolly, <b>Pepa Atanasova</b>, and Isabelle Augenstein. <a href="https://arxiv.org/abs/2112.06924">Generating Fluent Fact Checking Explanations with Unsupervised Post-Editing</a>. Preprint, December 2021.</br></div>
+              <div class="filterDiv factchecking explainability">Wojciech Ostrowski, Arnav Arora, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.ijcai.org/proceedings/2021/0536.pdf">Multi-Hop Fact Checking of Political Claims.</a> Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence <a href="https://ijcai-21.org/">(IJCAI-21)</a>, August 2021 <a href="https://github.com/copenlu/politihop">[Dataset]</a> </br></div>
+              <div class="filterDiv">Sara Rosenthal, <b>Pepa Atanasova</b>, Georgi Karadzhov, Marcos Zampieri, Preslav Nakov. <a href="https://aclanthology.org/2021.findings-acl.80/">SOLID: A Large-Scale Semi-Supervised Dataset for Offensive Language Identification.</a> Findings of the Association for Computational Linguistics <a href="https://aclanthology.org/events/acl-2021/">(ACL-IJCNLP 2021)</a>, August 2021 <a href="https://zenodo.org/record/3950379#.YcnnkhPMI-S">[Dataset]</a> </br></div>
+
+             <div class="filterDiv explainability selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://aclanthology.org/2020.emnlp-main.263">A Diagnostic Study of Explainability Techniques for Text Classification.</a> In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP 2020</a>), November 2020. <a href="https://slideslive.com/38938813">[Video]</a> <a href="https://github.com/copenlu/xai-benchmark">[Code]</a> </br></div>
+             <div class="filterDiv factchecking explainability selected"><b>Pepa Atanasova</b><sup>*</sup>, Dustin Wright<sup>*</sup>, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.emnlp-main.256/">Generating Label Cohesive and Well-Formed Adversarial Claims</a>. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP 2020</a>), November 2020. <a href="https://github.com/copenlu/fever-adversarial-attacks">[Code]</a> </br></div>
+              <div class="filterDiv factchecking explainability selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.acl-main.656/">Generating Fact Checking Explanations.</a> In Proceedings of 2020 Annual Conference of the Association for Computational Linguistics (<a href="https://acl2020.org/">ACL 2020</a>), July 2020. <a href="http://slideslive.com/38929094">[Video]</a> </br></div>
+              <div class="filterDiv">Marcos Zampieri, Preslav Nakov, Sara Rosenthal, <b>Pepa Atanasova</b>, Georgi Karadzhov, Hamdy Mubarak, Leon Derczynski, Zeses Pitenis, Çağrı Çöltekin <a href="https://aclanthology.org/2020.semeval-1.188/">SemEval-2020 Task 12: Multilingual Offensive Language Identification in Social Media.</a> In Proceedings of the Fourteenth Workshop on Semantic Evaluation (<a href="https://alt.qcri.org/semeval2020/index.php?id=tasks">SemEval 2020</a>), December 2020.<a href="https://sites.google.com/site/offensevalsharedtask/results-and-paper-submission">[Shared Task]</a> </br></div>
+
+            <div class="filterDiv checkworthiness factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Georgi Karadzhov, Mitra Mohtarami, Giovanni Da San Martino. <a href="http://ceur-ws.org/Vol-2380/paper_269.pdf">Overview of the CLEF-2019 CheckThat! Lab: Automatic Identification and Verification of Claims. Task 1: Check-Worthiness.</a> In Conference and Labs of the Evaluation Forum (<a href="http://clef2019.clef-initiative.eu/">CLEF 2019</a>), September 2019. <a href="https://github.com/apepa/clef2019-factchecking-task1">[Shared Task, Datset]</a> </br></div>
+            <div class="filterDiv checkworthiness factchecking">Slavena Vasileva, <b>Pepa Atanasova</b>, Lluís Màrquez, Alberto Barrón-Cedeño, Preslav Nakov. <a href="https://aclanthology.org/R19-1141/">It Takes Nine to Smell a Rat: Neural Multi-Task Learning for Check-Worthiness Prediction.</a> In Proceedings of the International Conference on Recent Advances in Natural Language Processing (<a href="http://ranlp.org/archive/ranlp2019/start.php">RANLP 2019</a>), September 2019.</a></br></div>
+            <div class="filterDiv factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Georgi Karadzhov, Tsvetomila Mihaylova, Mitra Mohtarami, James Glass. <a href="https://dl.acm.org/doi/abs/10.1145/3297722">Automatic Fact-Checking Using Context and Discourse Information.</a> In Journal of Data and Information Quality (<a href="https://dl.acm.org/toc/jdiq/2019/11/3">JDIQ Vol 11, No. 3 2019</a>), July 2019.</a></br></div>
+            <div class="filterDiv"><b>Pepa Atanasova</b>, Georgi Karadzhov, Yasen Kiprov, Preslav Nakov, Fabrizio Sebastiani. <a href="https://dl.acm.org/doi/abs/10.1145/3331184.3331308">Evaluating Variable-Length Multiple-Option Lists in Chatbots and Mobile Search.</a> In Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (<a href="https://sigir.org/sigir2019/">SIGIR 2019</a>), July 2019.</a></br></div>
+            <div class="filterDiv factchecking">Tsvetomila Mihaylova, Georgi Karadzhov, <b>Pepa Atanasova</b>, Ramy Baly, Mitra Mohtarami, Preslav Nakov. <a href="https://aclanthology.org/S19-2149/">SemEval-2019 Task 8: Fact Checking in Community Question Answering Forums.</a> In Proceedings of the Proceedings of the 13th International Workshop on Semantic Evaluation (<a href="https://alt.qcri.org/semeval2019/">SemEval 2019</a>), July 2019.</a></br></div>
+
+            <div class="filterDiv checkworthiness factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Georgi Karadzhov, Mitra Mohtarami, Giovanni Da San Martino. <a href="http://ceur-ws.org/Vol-2125/invited_paper_13.pdf">Overview of the CLEF-2018 CheckThat! Lab on Automatic Identification and Verification of Political Claims. Task 1: Check-Worthiness.</a> In Conference and Labs of the Evaluation Forum (<a href="http://clef2018.clef-initiative.eu/">CLEF 2018</a>), September 2018. <a href="https://github.com/clef2018-factchecking/clef2018-factchecking">[Shared Task, Datset]</a> </br></div>
+            <div class="filterDiv checkworthiness factchecking">Israa Jaradat, <b>Pepa Atanasova</b>, Alberto Barrón-Cedeño, Lluís Màrquez, Preslav Nakov. <a href="https://aclanthology.org/N18-5006/">ClaimRank: Detecting Check-Worthy Claims in Arabic and English. Task 1: Check-Worthiness.</a> In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Demonstrations (<a href="http://naacl.org/naacl-hlt-2018/">NAACL 2018</a>), June 2018. </br></div>
+
+              <div class="filterDiv checkworthiness factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Ivan Koychev. <a href="https://aclanthology.org/R17-1037/">A Context-aware Approach for Detecting Worth-checking Claims in Political Debates.</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. </br></div>
+              <div class="filterDiv factchecking">Georgi Karadzhov, <b>Pepa Gencheva</b>, Preslav Nakov, Ivan Koychev. <a href="https://aclanthology.org/R17-1037/">We Built a Fake News / Click Bait Filter: What Happened Next Will Blow Your Mind!.</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. </br></div>
+              <div class="filterDiv">Venelin Kovatchev, Irina Temnikova, <b>Pepa Atanasova</b>, Yasen Kiprov, Ivelina Nikolova. <a href="https://aclanthology.org/volumes/R17-2/">Proceedings of the Student Research Workshop Associated with RANLP 2017 .</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. </br></div>
+               <div class="filterDiv">Yasen Kiprov, <b>Pepa Atanasova</b>, Ivan Koychev. <a https://dl.acm.org/doi/abs/10.1145/3099023.3099048">Generating labeled datasets of twitter users.</a> In Proceedings of the 25th Conference on User Modeling, Adaptation and Personalization, <a href="https://www.um.org/umap2017/index.html">(UMAP 2017)</a>, August 2017. </br></div>
+
+            <div class="filterDiv">Tsvetomila Mihaylova, <b>Pepa Gencheva<b>, Martin Boyanov, Ivana Yovcheva, Todor Mihaylov, Momchil Hardalov, Yasen Kiprov, Daniel Balchev, Ivan Koychev, Preslav Nakov, Ivelina Nikolova, Galia Angelova. <a href="https://aclanthology.org/S16-1129/">SUper Team at SemEval-2016 Task 3: Building a Feature-Rich System for Community Question Answering.</a> In Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016) (<a href="https://alt.qcri.org/semeval2016/">SemEval 2016</a>), June 2016. <b>First Place.</b></a></br></div>
+            </div>
             </section>
 
 
@@ -248,7 +302,7 @@
 <!--                </div>-->
 <!--            </section>-->
 
-            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2021</footer>
+            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2022</footer>
         </main>
     </div>
     <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
@@ -256,5 +310,52 @@
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/live-resume.js"></script>
 </body>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var btnContainer1 = document.getElementById("myBtnContainer");
+    var btns1 = btnContainer1.getElementsByClassName("btn");
+    for (var j =0; j< btns1.length; j++){
+        btns1[j].className = btns1[j].className.replace(" active", "");
+    }
+
+    this.className += " active";
+  });
+}
+</script>
 </html>
