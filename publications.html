@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+#myBtnContainer{
+    margin-left: 15px;
+}
 .filterDiv {
   float: left;
   margin: 2px;
@@ -17,7 +20,7 @@
 .btn {
   border: none;
   outline: none;
-  padding: 12px 16px;
+  padding: 12px 14px;
   background-color: #f1f1f1;
   cursor: pointer;
 }
@@ -41,14 +44,11 @@
 
 <body>
     <header>
-<!--        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">-->
-<!--            SHARE</button>-->
         <nav class="collapsible-nav" id="collapsible-nav">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="publications.html" class="nav-link active">Publications</a>
             <a href="service.html" class="nav-link">SERVICE</a>
-<!--            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>-->
-<!--            <a href="blog.html" class="nav-link">BLOG</a>-->
+
         </nav>
         <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
             data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
@@ -74,42 +74,6 @@
                 <a href="https://orcid.org/0000-0002-0023-2616" class="social-link"><i class="fab fa-orcid"></i></a>
                 <a href="https://twitter.com/atanasovapepa" class="social-link"><i class="fab fa-twitter"></i></a>
             </nav>
-<!--            <div class="twitter-timeline-div">-->
-<!--            <a class="twitter-timeline" href="https://twitter.com/atanasovapepa?ref_src=twsrc%5Etfw">Tweets by atanasovapepa</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-<!--             </div>-->
-<!--            <div class="widget">-->
-<!--                <h5 class="widget-title">personal information</h5>-->
-<!--                <div class="widget-content">-->
-<!--                    <p>BIRTHDAY : 15 April 1990</p>-->
-<!--                    <p>WEBSITE : www.example.com</p>-->
-<!--                    <p>PHONE : +1 123 000 4444</p>-->
-<!--                    <p>MAIL : your@example.com</p>-->
-<!--                    <p>Location : California, USA</p>-->
-<!--                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"-->
-<!--                        class="btn-img">DOWNLOAD CV </button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="widget card">-->
-<!--                <div class="card-body">-->
-<!--                    <div class="widget-content">-->
-<!--                        <h5 class="widget-title card-title">LANGUAGES</h5>-->
-<!--                        <p>English : native</p>-->
-<!--                        <p>Spanish : fluent</p>-->
-<!--                        <p>Italian : fluent</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="widget card">-->
-<!--                <div class="card-body">-->
-<!--                    <div class="widget-content">-->
-<!--                        <h5 class="widget-title card-title">INTERESTS</h5>-->
-<!--                        <p>Video games</p>-->
-<!--                        <p>Finance</p>-->
-<!--                        <p>Basketball</p>-->
-<!--                        <p>Theatre</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
         </aside>
         <main>
          <section class="intro-section">
@@ -117,13 +81,12 @@
             <div id="myBtnContainer">
               <button class="btn active" onclick="filterSelection('all')"> Show All</button>
               <button class="btn" onclick="filterSelection('selected')"> Selected</button>
-              <button class="btn" onclick="filterSelection('factchecking')"> Fact Checking</button>
               <button class="btn" onclick="filterSelection('explainability')"> Explainability</button>
+              <button class="btn" onclick="filterSelection('factchecking')"> Fact Checking</button>
               <button class="btn" onclick="filterSelection('checkworthiness')"> Check-worthiness</button>
             </div>
             <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
             <div class="container">
-
               <div class="filterDiv explainability selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://arxiv.org/abs/2109.03756">Diagnostics-Guided Explanation Generation.</a> In Proceeding sof the Thirty-Sixth AAAI Conference on Artificial Intelligence <a href="https://aaai.org/Conferences/AAAI-22/">(AAAI-2022)</a>, February, 2022</br></div>
               <div class="filterDiv">Luna De Bruyne, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.sciencedirect.com/science/article/pii/S0885230821000644?casa_token=KKR8DRzz4ToAAAAA:PIVFexBd46e3kG2d9v-9diPyVsD1ZMNQetl0I3mUP8OBJKe0ojxn5ZjC-YDXoFeFoww4ZBZZFA">Joint Emotion Label Space Modelling for Affect Lexica.</a> Computer Speech & Language, <a href="https://www.sciencedirect.com/journal/computer-speech-and-language/vol/71/suppl/C">(volume 71)</a>, January 2022</br></div>
 
@@ -151,156 +114,10 @@
               <div class="filterDiv">Venelin Kovatchev, Irina Temnikova, <b>Pepa Atanasova</b>, Yasen Kiprov, Ivelina Nikolova. <a href="https://aclanthology.org/volumes/R17-2/">Proceedings of the Student Research Workshop Associated with RANLP 2017 .</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. </br></div>
                <div class="filterDiv">Yasen Kiprov, <b>Pepa Atanasova</b>, Ivan Koychev. <a https://dl.acm.org/doi/abs/10.1145/3099023.3099048">Generating labeled datasets of twitter users.</a> In Proceedings of the 25th Conference on User Modeling, Adaptation and Personalization, <a href="https://www.um.org/umap2017/index.html">(UMAP 2017)</a>, August 2017. </br></div>
 
-            <div class="filterDiv">Tsvetomila Mihaylova, <b>Pepa Gencheva<b>, Martin Boyanov, Ivana Yovcheva, Todor Mihaylov, Momchil Hardalov, Yasen Kiprov, Daniel Balchev, Ivan Koychev, Preslav Nakov, Ivelina Nikolova, Galia Angelova. <a href="https://aclanthology.org/S16-1129/">SUper Team at SemEval-2016 Task 3: Building a Feature-Rich System for Community Question Answering.</a> In Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016) (<a href="https://alt.qcri.org/semeval2016/">SemEval 2016</a>), June 2016. <b>First Place.</b></a></br></div>
+            <div class="filterDiv">Tsvetomila Mihaylova, <b>Pepa Gencheva</b>, Martin Boyanov, Ivana Yovcheva, Todor Mihaylov, Momchil Hardalov, Yasen Kiprov, Daniel Balchev, Ivan Koychev, Preslav Nakov, Ivelina Nikolova, Galia Angelova. <a href="https://aclanthology.org/S16-1129/">SUper Team at SemEval-2016 Task 3: Building a Feature-Rich System for Community Question Answering.</a> In Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016) (<a href="https://alt.qcri.org/semeval2016/">SemEval 2016</a>), June 2016. <b>First Place.</b></a></br></div>
             </div>
             </section>
 
-
-
-
-<!--            <section class="resume-section">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-6">-->
-<!--                        <h6 class="section-subtitle">RESUME</h6>-->
-<!--                        <h2 class="section-title">EDUCATION</h2>-->
-<!--                        <ul class="time-line">-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">1998 - 2005</span>-->
-<!--                                <h6 class="time-line-item-title">Master In Computer Science</h6>-->
-<!--                                <p class="time-line-item-subtitle">MASTER, UNIVERSITY</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed tortor.</p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">1995 - 1998</span>-->
-<!--                                <h6 class="time-line-item-title">Studied at Harvard University</h6>-->
-<!--                                <p class="time-line-item-subtitle">UNIVERSITY</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">1993 - 1995</span>-->
-<!--                                <h6 class="time-line-item-title">Studied at Oxford University</h6>-->
-<!--                                <p class="time-line-item-subtitle">UNIVERSITY</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-6">-->
-<!--                        <h6 class="section-subtitle">RESUME</h6>-->
-<!--                        <h2 class="section-title">Experience</h2>-->
-<!--                        <ul class="time-line">-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">2010 - 2014</span>-->
-<!--                                <h6 class="time-line-item-title">UI/UX Designer</h6>-->
-<!--                                <p class="time-line-item-subtitle">Web Agency</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed-->
-<!--                                    tortor.</p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">2008 - 2010</span>-->
-<!--                                <h6 class="time-line-item-title">Web Designer</h6>-->
-<!--                                <p class="time-line-item-subtitle">Apple Inc.</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed-->
-<!--                                    tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">2006 - 2008</span>-->
-<!--                                <h6 class="time-line-item-title">Graphic Designer</h6>-->
-<!--                                <p class="time-line-item-subtitle">Apple Inc.</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed-->
-<!--                                    tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--            <section class="services-section">-->
-<!--                <h6 class="section-subtitle">WHAT I DO</h6>-->
-<!--                <h2 class="section-title">SERVICES</h2>-->
-<!--                <div class="row">-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/001-target.svg" alt="target">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">web designing</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/003-idea.svg" alt="bulb">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">Graphic design</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/002-development.svg" alt="development">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">Development</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/004-smartphone.svg" alt="smartphone">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">Mobile design</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--            <section class="testimonial-section">-->
-<!--                <div id="testimonialCarousel" class="testimonial-carousel carousel slide" data-ride="carousel">-->
-<!--                    <div class="carousel-inner">-->
-<!--                        <div class="carousel-item active">-->
-<!--                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,-->
-<!--                                interdum sed tortor.</p>-->
-<!--                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">-->
-<!--                            <p class="testimonial-name">Nout Golstein</p>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,-->
-<!--                                interdum sed tortor.</p>-->
-<!--                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">-->
-<!--                            <p class="testimonial-name">Nout Golstein</p>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,-->
-<!--                                interdum sed tortor.</p>-->
-<!--                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">-->
-<!--                            <p class="testimonial-name">Nout Golstein</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <ol class="carousel-indicators">-->
-<!--                        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>-->
-<!--                        <li data-target="#testimonialCarousel" data-slide-to="1"></li>-->
-<!--                        <li data-target="#testimonialCarousel" data-slide-to="2"></li>-->
-<!--                    </ol>-->
-<!--                </div>-->
-<!--            </section>-->
 
             <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2022</footer>
         </main>
