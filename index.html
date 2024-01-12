@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="assets/css/live-resume.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #more {display: none;}
+    </style>
 </head>
 
 <body>
@@ -135,6 +139,7 @@
                 <p class="space-p">
                     <i>January 2023: </i> CopeNLU has new open PhD and postdoc positions. Among them is a PhD position on explainable fact checking, which will be co-supervised by me. See <a href="https://jobportal.ku.dk/phd/?show=158207">[link]</a> for more details!</br>
                 </p>
+                <span id="dots">...</span><span id="more">
                 <p class="space-p">
                     <i>November 2022: </i> My PhD thesis is now <a href="https://arxiv.org/pdf/2211.04946.pdf">online!</a></br>
                 </p>
@@ -204,6 +209,9 @@
                 <p class="space-p">
                     <i>March 2020: </i> Excited to start my research internship at Google Research working on adversarial fact checking evidence extraction!</br>
                 </p>
+                </span>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+
             </section>
 
 
@@ -360,6 +368,23 @@
     <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/live-resume.js"></script>
+    <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
 </body>
 
 </html>
