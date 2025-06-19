@@ -3,60 +3,68 @@
 <style>
 #myBtnContainer{
     margin-left: 15px;
+    margin-bottom: 20px;
 }
 .filterDiv {
-  float: left;
-  margin: 2px;
-  display: none;
+  display: none !important;
 }
-.show {
-  display: block;
+.filterDiv.show {
+  display: block !important;
 }
 .container {
   margin-top: 20px;
-  overflow: hidden;
+  overflow: visible;
 }
 /* Style the buttons */
 .btn {
   border: none;
   outline: none;
   padding: 12px 14px;
-  background-color: #f1f1f1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 .btn:hover {
-  background-color: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
 }
 .btn.active {
-  background-color: #a88e8c;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
   color: white;
+  transform: scale(1.05);
 }
 </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pepa Atanasova :: Home</title>
+    <title>Pepa Atanasova :: Publications</title>
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="assets/css/live-resume.css">
+    <link rel="stylesheet" href="assets/css/custom-academic.css">
 </head>
 
 <body>
     <header>
-        <nav class="collapsible-nav" id="collapsible-nav">
-            <a href="index.html" class="nav-link ">HOME</a>
-            <a href="https://www.copenlu.com/" class="nav-link">GROUP</a>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
             <a href="publications.html" class="nav-link active">PUBLICATIONS</a>
-            <a href="talks.html" class="nav-link">TALKS</a>
-            <a href="service.html" class="nav-link">SERVICE</a>
             <a href="teaching.html" class="nav-link">TEACHING</a>
+            <a href="service.html" class="nav-link">SERVICE</a>
+            <a href="talks.html" class="nav-link">TALKS</a>
+            <a href="https://www.copenlu.com/" class="nav-link">GROUP</a>
             <a href="contact.html" class="nav-link">CONTACT</a>
 
 
         </nav>
-        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
-            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
     </header>
     <div class="content-wrapper">
         <aside>
@@ -67,9 +75,8 @@
            <div class="text-center">
                 <span class="badge badge-white badge-pill profile-designation">Assistant Professor</span>
 <!--                <span class="badge badge-white badge-pill profile-designation"><a href="https://talent.ku.dk/about-the-doctoral-programme/">TALENT Doctoral Programme</a></span>-->
-                <span class="badge badge-white badge-pill profile-designation"><a href="http://www.copenlu.com/">Copenhagen NLU group</a></span>
+                <span class="badge badge-white badge-pill profile-designation"><a href="http://www.copenlu.com/">CopeNLU group</a></span>
                 <span class="badge badge-white badge-pill profile-designation"><a href="https://di.ku.dk/">Department of Computer Science</a></span>
-                <span class="badge badge-white badge-pill profile-designation"><a href="mailto:pepa@di.ku.dk">pepa@di.ku.dk</a> </span>
 <!--                <span class="badge badge-white badge-pill profile-designation"><img src="assets/images/download.svg" alt="download" class="btn-img"><a href="https://drive.google.com/file/d/1DB8o4ASATDgEN0GMElRMNJSsYlBspWM8/view?usp=sharing" download="PepaAtanasovaCV.pdf" target="_blank">DOWNLOAD CV</a></span>-->
             </div>
             <nav class="social-links">
@@ -77,10 +84,43 @@
                 <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/" class="social-link"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/apepa/" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="https://orcid.org/0000-0002-0023-2616" class="social-link"><i class="fab fa-orcid"></i></a>
-                <a href="https://twitter.com/atanasovapepa" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/atanasovapepa" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://bsky.app/profile/apepa.bsky.social" class="social-link bluesky-link"><i class="fab fa-bluesky"></i></a>
+                <a></a>
+                <a href="mailto:pepa@di.ku.dk" class="social-link" title="Send email"><i class="fas fa-envelope"></i></a>
             </nav>
+            <div class="text-center">
+                <a href="https://drive.google.com/file/d/1DB8o4ASATDgEN0GMElRMNJSsYlBspWM8/view?usp=sharing" class="cv-download-btn" target="_blank">📄 Download CV</a>
+            </div>
         </aside>
         <main>
+         <!-- Publication Metrics Section -->
+         <section class="metrics-section">
+            <h2 class="section-title">Publication Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📊</div>
+                    <div class="metric-value">2800+</div>
+                    <div class="metric-label">Citations</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">📚</div>
+                    <div class="metric-value">40+</div>
+                    <div class="metric-label">Publications</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <div class="metric-value">22</div>
+                    <div class="metric-label">h-index</div>
+                </div>
+<!--                <div class="metric-card">-->
+<!--                    <div class="metric-icon">🏆</div>-->
+<!--                    <div class="metric-value">5</div>-->
+<!--                    <div class="metric-label">Best Paper Awards</div>-->
+<!--                </div>-->
+            </div>
+         </section>
+         
          <section class="intro-section">
             <!-- Control buttons -->
             <div id="myBtnContainer">
@@ -88,13 +128,15 @@
               <button class="btn" onclick="filterSelection('selected')"> Selected</button>
               <button class="btn" onclick="filterSelection('explainability')"> Explainability</button>
                 <button class="btn" onclick="filterSelection('mechinterp')"> Mechanistic Interpretability</button>
-              <button class="btn" onclick="filterSelection('factchecking')"> Factuality</button>
-              <button class="btn" onclick="filterSelection('checkworthiness')"> Check-worthiness</button>
+              <button class="btn" onclick="filterSelection('factuality')"> Factuality</button>
+<!--              <button class="btn" onclick="filterSelection('checkworthiness')"> Check-worthiness</button>-->
             </div>
             <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
             <div class="container">
+                <div class="filterDiv explainability">Yingming Wang, <b>Pepa Atanasova</b> <a href=https://arxiv.org/pdf/2505.22823">Self-Critique and Refinement for Faithful Natural Language Explanations.</a> </br></div>
+
                 <div class="filterDiv explainability">Shuzhou Yuan, Jingyi Sun, Ran Zhang, Michael Färber, Steffen Eger, <b>Pepa Atanasova</b>, Isabelle Augenstein <a href="https://arxiv.org/pdf/2412.12318">Graph-Guided Textual Explanation Generation Framework.</a> </br></div>
-                <div class="filterDiv factchecking mechinterp selected">Lovisa Hagström, Sara Vera Marjanović, Haeun Yu, Arnav Arora, Christina Lioma, Maria Maistro, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2412.17031">A Reality Check on Context Utilisation for Retrieval-Augmented Generation.</a> </br></div>
+                <div class="filterDiv factchecking mechinterp selected">Lovisa Hagström, Sara Vera Marjanović, Haeun Yu, Arnav Arora, Christina Lioma, Maria Maistro, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2412.17031">A Reality Check on Context Utilisation for Retrieval-Augmented Generation.</a> In ACL 2025. </br></div>
 
 
                 <div class="filterDiv mechinterp selected">Sara Vera Marjanović, Haeun Yu, <b>Pepa Atanasova</b>, Maria Maistro, Christina Lioma, Isabelle Augenstein. <a href="https://aclanthology.org/2024.findings-emnlp.838/">From Internal Conflict to Contextual Adaptation of Language Models.</a> In Findings of EMNLP 2024. </br></div>
