@@ -1,453 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pepa Atanasova :: Home</title>
-    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/live-resume.css">
-    <link rel="stylesheet" href="assets/css/custom-academic.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pepa Atanasova</title>
     <style>
-    #more {display: none;}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header { margin-bottom: 2rem; }
+        nav { margin-bottom: 1.5rem; }
+        nav a { margin-right: 1.5rem; color: #555; font-size: 0.9rem; }
+        nav a:hover, nav a.active { color: #000; }
+        .profile { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem; }
+        .profile img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+        .profile-info h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .profile-info p { color: #666; margin-bottom: 0.2rem; }
+        .social-links { margin-top: 0.5rem; }
+        .social-links a { margin-right: 1rem; color: #666; }
+        section { margin-bottom: 2.5rem; }
+        h2 { font-size: 1.2rem; margin-bottom: 1rem; color: #000; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .intro p { margin-bottom: 1rem; }
+        .research-item { margin-bottom: 1rem; }
+        .research-item h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .research-item p { color: #666; font-size: 0.95rem; }
+        .award { margin-bottom: 0.8rem; }
+        .award strong { display: block; }
+        .award span { color: #666; font-size: 0.9rem; }
+        .news-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #f0f0f0; }
+        .news-item:last-child { border-bottom: none; }
+        .news-date { color: #888; font-size: 0.85rem; display: block; margin-bottom: 0.3rem; }
+        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
+        @media (max-width: 600px) {
+            .profile { flex-direction: column; align-items: center; text-align: center; }
+            .profile img { width: 120px; height: 120px; }
+            nav a { display: inline-block; margin: 0.3rem 0.8rem 0.3rem 0; }
+        }
     </style>
 </head>
-
 <body>
     <header>
-<!--        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">-->
-<!--            SHARE</button>-->
-        <nav >
-            <a href="index.html" class="nav-link active">HOME</a>
-            <a href="publications.html" class="nav-link">PUBLICATIONS</a>
-            <a href="teaching.html" class="nav-link">TEACHING</a>
-            <a href="service.html" class="nav-link">SERVICE</a>
-            <a href="talks.html" class="nav-link">TALKS</a>
-            <a href="https://www.copenlu.com/" class="nav-link">GROUP</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="service.html">Service</a>
+            <a href="talks.html">Talks</a>
+            <a href="https://www.copenlu.com/">Group</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div class="content-wrapper">
-        <aside>
-            <div class="profile-img-wrapper">
-                <img src="assets/images/Profile.png" alt="profile">
+
+    <div class="profile">
+        <img src="assets/images/Profile.jpg" alt="Pepa Atanasova">
+        <div class="profile-info">
+            <h1>Pepa Atanasova</h1>
+            <p>Assistant Professor (Tenure Track)</p>
+            <p><a href="https://di.ku.dk/">Department of Computer Science</a></p>
+            <p><a href="http://www.copenlu.com/">CopeNLU Group</a></p>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=CLOC3rEAAAAJ&hl=en">Scholar</a>
+                <a href="https://github.com/apepa/">GitHub</a>
+                <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/">LinkedIn</a>
+                <a href="mailto:pepa@di.ku.dk">Email</a>
+                <a href="CV_20_06_2025.pdf">CV</a>
             </div>
-            <h1 class="profile-name">Pepa Atanasova</h1>
-            <div class="text-center">
-                <span class="badge badge-white badge-pill profile-designation">Assistant Professor</span>
-<!--                <span class="badge badge-white badge-pill profile-designation"><a href="https://talent.ku.dk/about-the-doctoral-programme/">TALENT Doctoral Programme</a></span>-->
-                <span class="badge badge-white badge-pill profile-designation"><a href="http://www.copenlu.com/">CopeNLU group</a></span>
-                <span class="badge badge-white badge-pill profile-designation"><a href="https://di.ku.dk/">Department of Computer Science</a></span>
-            </div>
-            <div class="text-center">
-                <a href="CV_20_06_2025.pdf" class="cv-download-btn" target="_blank">📄 Download CV</a>
-            </div>
-            <nav class="social-links">
-                <a href="https://scholar.google.com/citations?user=CLOC3rEAAAAJ&hl=en" class="social-link"><i class="fab fa-scholar"></i></a>
-                <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/apepa/" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://orcid.org/0000-0002-0023-2616" class="social-link"><i class="fab fa-orcid"></i></a>
-                <a href="https://twitter.com/atanasovapepa" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://bsky.app/profile/apepa.bsky.social" class="social-link bluesky-link"><i class="fab fa-bluesky"></i></a>
-                <a></a>
-                <a href="mailto:pepa@di.ku.dk" class="social-link" title="Send email"><i class="fas fa-envelope"></i></a>
-
-            </nav>
-<!--            <div class="twitter-timeline-div">-->
-<!--            <a class="twitter-timeline" href="https://twitter.com/atanasovapepa?ref_src=twsrc%5Etfw">Tweets by atanasovapepa</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-<!--             </div>-->
-<!--            <div class="widget">-->
-<!--                <h5 class="widget-title">personal information</h5>-->
-<!--                <div class="widget-content">-->
-<!--                    <p>BIRTHDAY : 15 April 1990</p>-->
-<!--                    <p>WEBSITE : www.example.com</p>-->
-<!--                    <p>PHONE : +1 123 000 4444</p>-->
-<!--                    <p>MAIL : your@example.com</p>-->
-<!--                    <p>Location : California, USA</p>-->
-<!--                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"-->
-<!--                        class="btn-img">DOWNLOAD CV </button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="widget card">-->
-<!--                <div class="card-body">-->
-<!--                    <div class="widget-content">-->
-<!--                        <h5 class="widget-title card-title">LANGUAGES</h5>-->
-<!--                        <p>English : native</p>-->
-<!--                        <p>Spanish : fluent</p>-->
-<!--                        <p>Italian : fluent</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="widget card">-->
-<!--                <div class="card-body">-->
-<!--                    <div class="widget-content">-->
-<!--                        <h5 class="widget-title card-title">INTERESTS</h5>-->
-<!--                        <p>Video games</p>-->
-<!--                        <p>Finance</p>-->
-<!--                        <p>Basketball</p>-->
-<!--                        <p>Theatre</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-        </aside>
-        <main>
-            <section class="intro-section">
-                <p>I am an Assistant Professor (Tenure Track) in the <a href="https://di.ku.dk/english/research/nlp/">Department of Computer Science, NLP Section at the University of Copenhagen</a>. I am currenly employed at the University of Copenhagen with special teaching duties dedicated to courses for industry practitioners. I am also co-leading the <a href="http://www.copenlu.com/">CopeNLU group</a> with Isabelle Augenstein.</p>
-
-                <p>
-                I completed my PhD at the University of Copenhagen under the supervision of Isabelle Augenstein, Jakob Grue Simonsen, and Christina Lioma. My PhD was funded by a Marie Skłodowska-Curie Fellowship and the PhD Thesis titled "Accountable and Explainable Methods for Complex Reasoning over Text" was awarded two best PhD Thesis Awards by <a href="https://ellis.eu/news/the-ellis-phd-award-2023-recognizes-two-young-scientists-from-the-universities-in-copenhagen-and-tubingen">ELLIS</a> and <a href="https://www.informatics-europe.org/news/849-university-of-copenhagen-phd-graduate-wins-2023-best-dissertation-award.html">Informatics Europe</a>. I also gained industrial experience during my PhD with two internships at Meta and Google. Furthermore, I conducted an interdisciplinary Postdoctoral fellowship at the University of Copenhagen with Isabelle Augenstein and Christian Borch, where we employed LM explanations to simulate trading behaviors.
-                </p>
-
-                <p>For more details and a list of recent publications, see <a href="https://apepa.github.io/publications.html">Publications</a>.</p>
-            </section>
-
-            <!-- PhD Position Announcement -->
-<!--            <section class="phd-announcement" style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 20px; margin: 20px 0; border-radius: 5px;">-->
-<!--                <h5>I am looking for a PhD student on Trustworthy NLP with a start date in March 2026! The successful candidate will co-supervised by <a href="https://isabelleaugenstein.github.io/">Prof. Isabelle Augenstein</a> and will join our <a href="http://www.copenlu.com/">CopeNLU group</a>. For more details see the <a href="https://candidate.hr-manager.net/ApplicationInit.aspx?cid=1307&ProjectId=164924&DepartmentId=18970&MediaId=5&IsAdPreviewRequest=true&AdvertisementId=118926">APPLICATION LINK.</a> See reasons to apply <a href="http://www.copenlu.com/post/why-ucph/">here.</a></h5>-->
-<!--            </section>-->
-
-            <!-- Research Highlights Section -->
-            <section class="research-highlights">
-                <h2 class="section-title">Research Highlights</h2>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <h4>Interpretability of Language Models</h4>
-                        <p>Understanding mechanisms of LLMs with some applications to context usage and parametric knowledge.</p>
-<!--                        <a href="publications.html" class="read-more">View Publications</a>-->
-                    </div>
-                    <div class="research-card">
-                        <h4>Explainability Methods</h4>
-                        <p>Designing robust and user-aligned explainability techniques that enhance the understanding of complex models.</p>
-<!--                        <a href="publications.html" class="read-more">View Publications</a>-->
-                    </div>
-                    <div class="research-card">
-                        <h4>Factuality in LMs</h4>
-                        <p>Addressing the challenge of maintaining factual accuracy in language models.</p>
-<!--                        <a href="publications.html" class="read-more">View Publications</a>-->
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Opportunities Section -->
-            <section class="opportunities-section">
-                <h2 class="section-title">Opportunities & Supervision</h2>
-                <p>There are opportunities to apply to Danish funding agencies for PhD and Postdoc positions within the group, as well as for visiting researchers. For more information, please see <a href="https://apepa.github.io/contact.html">Contact</a>.</p>
-                <p>I supervise Master's and Bachelor's students from the University of Copenhagen. For more details, please see <a href="https://apepa.github.io/contact.html">Contact</a>.</p>
-            </section>
-            
-            <!-- Awards and Recognition Section -->
-            <section class="awards-section">
-                <h2 class="section-title">Awards & Recognition</h2>
-                <div class="award-item">
-                    <div class="award-icon">🏆</div>
-                    <div class="award-content">
-                        <h4>ELLIS Best PhD Thesis Award</h4>
-                        <p>2023 - One of two recipients for the thesis "Accountable and Explainable Methods for Complex Reasoning over Text"</p>
-                    </div>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">🏆</div>
-                    <div class="award-content">
-                        <h4>Informatics Europe Best Dissertation Award</h4>
-                        <p>2023 - Awarded for outstanding PhD dissertation with opportunity to publish in Springer series</p>
-                    </div>
-                </div>
-            </section>
-            <!-- News Section -->
-            <section class="news-section">
-                <h2 class="section-title">Recent News</h2>
-                <div class="news-year-group">
-                    <h3 class="news-year-header">2025</h3>
-
-                    <div class="news-item">
-                        <span class="news-date">December 2025</span>
-                        <div class="news-content">
-                            <p>I gave a talk at ELLIS Unconference "When Explanations Lie: Testing and Improving Faithfulness in Model Reasoning", at the <a href="https://llmsafety-unconference.github.io/">LLM Safety and Security Workshop</a> [<a href="slides/explanation_lies.pdf">Slides</a>]</p>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-date">November 2025</span>
-                        <div class="news-content">
-                            <p>I gave a talk at <a href="https://event.ing.dk/dts5">Digital Tech Summit</a> titled "Reality Check of LLM-driven Fact Verification" [<a href="slides/DTS_2025.pdf">Slides</a>]</p>
-                        </div>
-                    </div>
-
-                    <div class="news-item">
-                        <span class="news-date">October 2025</span>
-                        <div class="news-content">
-                            <p>I gave a talk at INRIA P16 Program titled "The Challenge of Trustworthy AI Explanations" [<a href="slides/trustworthy_nles.pdf">Slides</a>]</p>
-                        </div>
-                    </div>
-
-
-                    <div class="news-item">
-                        <span class="news-date">August 2025</span>
-                        <div class="news-content">
-                            <p>Together with Sneha Das and Rune Nyrup, we received a grant from the Pioneer Center for AI in Denmark to organise workshops on the topics of Trustworthy AI! Stay tuned for more information!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">August 2025</span>
-                        <div class="news-content">
-                            <p>Two papers accepted at EMNLP, 2025, Main on improving the faithfulness of natural language explanations: <a href="https://arxiv.org/pdf/2505.22823">"Self-Critique and Refinement for Faithful Natural Language Explanations"</a>, <a href="https://arxiv.org/pdf/2412.12318">"Graph-Guided Textual Explanation Generation Framework"</a>.</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">July 2025</span>
-                        <div class="news-content">
-                            <p>I am co-organizing a <a href="https://www.aicentre.dk/events/pre-acl-2025-workshop">pre-ACL workshop</a> in Copenhagen in July 2025!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">May 2025</span>
-                        <div class="news-content">
-                            <p>New preprint: <a href="https://arxiv.org/pdf/2505.22823">Self-Critique and Refinement for Faithful Natural Language Explanations</a></p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">March 2025</span>
-                        <div class="news-content">
-                            <p>Our paper <a href="https://arxiv.org/pdf/2412.17031">A Reality Check on Context Utilisation for Retrieval-Augmented Generation</a> was accepted to ACL 2025!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">January 2025</span>
-                        <div class="news-content">
-                            <p>Our paper <a href="https://aclanthology.org/2025.naacl-long.530.pdf">Evaluating input feature explanations through a unified diagnostic evaluation framework</a> was accepted at NAACL 2025!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">January 2025</span>
-                        <div class="news-content">
-                            <p>New preprint on improving explanation faithfulness: <a href="https://arxiv.org/pdf/2412.12318">Graph-Guided Textual Explanation Generation Framework.</a></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="news-year-group">
-                    <h3 class="news-year-header">2024</h3>
-                    <div class="news-item">
-                        <span class="news-date">November 2024</span>
-                        <div class="news-content">
-                            <p>I gave a talk for the <a href="https://www.sheffield.ac.uk/cs/research/groups/natural-language-processing">Sheffield NLP Group</a> (<a href="https://www.slideshare.net/slideshow/facts-unveiled-navigating-factuality-in-the-era-of-generative-models/273118747">Slides</a>)</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">October 2024</span>
-                        <div class="news-content">
-                            <p>Our paper <a href="https://arxiv.org/pdf/2407.17023">"DYNAMICQA: Tracing Internal Knowledge Conflicts in Language Models"</a> was accepted at Findings of EMNLP 2024!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">September 2024</span>
-                        <div class="news-content">
-                            <p>I gave an invited talk on "Facts Unveiled: Navigating Factuality in the Era of Generative Models" at <a href="https://days.airomania.eu/">Romanian AI days 2024</a>!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">September 2024</span>
-                        <div class="news-content">
-                            <p>I gave an opening keynote on "Facts Unveiled: Navigating Factuality in the Era of Generative Models" at <a href="https://igelu.org/event/igelu-2024-conference/">iGeLU 2024</a>!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">September 2024</span>
-                        <div class="news-content">
-                            <p>I am excited to start on a new position as a Tenure-track Assistant Professor at the University of Copenhagen, Department of Computer Science. See the news piece <a href="https://di.ku.dk/english/research/nlp/news/new-faculty-member-in-dikus-nlp-section/">here</a>!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">May 2024</span>
-                        <div class="news-content">
-                            <p>Our paper <a href="https://aclanthology.org/2024.acl-long.444.pdf">"Revealing the Parametric Knowledge of Language Models: A Unified Framework for Attribution Methods"</a> was accepted to ACL'2024!</p>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <span class="news-date">January 2024</span>
-                        <div class="news-content">
-                            <p>I gave an oral talk titled "Exploring the Explainability Landscape: Testing and Enhancing Explainability Techniques." at <a href="https://www.chalmers.se/en/">Chalmers University</a>.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-
-
-
-
-<!--            <section class="resume-section">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-6">-->
-<!--                        <h6 class="section-subtitle">RESUME</h6>-->
-<!--                        <h2 class="section-title">EDUCATION</h2>-->
-<!--                        <ul class="time-line">-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">1998 - 2005</span>-->
-<!--                                <h6 class="time-line-item-title">Master In Computer Science</h6>-->
-<!--                                <p class="time-line-item-subtitle">MASTER, UNIVERSITY</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed tortor.</p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">1995 - 1998</span>-->
-<!--                                <h6 class="time-line-item-title">Studied at Harvard University</h6>-->
-<!--                                <p class="time-line-item-subtitle">UNIVERSITY</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">1993 - 1995</span>-->
-<!--                                <h6 class="time-line-item-title">Studied at Oxford University</h6>-->
-<!--                                <p class="time-line-item-subtitle">UNIVERSITY</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-6">-->
-<!--                        <h6 class="section-subtitle">RESUME</h6>-->
-<!--                        <h2 class="section-title">Experience</h2>-->
-<!--                        <ul class="time-line">-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">2010 - 2014</span>-->
-<!--                                <h6 class="time-line-item-title">UI/UX Designer</h6>-->
-<!--                                <p class="time-line-item-subtitle">Web Agency</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed-->
-<!--                                    tortor.</p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">2008 - 2010</span>-->
-<!--                                <h6 class="time-line-item-title">Web Designer</h6>-->
-<!--                                <p class="time-line-item-subtitle">Apple Inc.</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed-->
-<!--                                    tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                            <li class="time-line-item">-->
-<!--                                <span class="badge badge-primary">2006 - 2008</span>-->
-<!--                                <h6 class="time-line-item-title">Graphic Designer</h6>-->
-<!--                                <p class="time-line-item-subtitle">Apple Inc.</p>-->
-<!--                                <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla-->
-<!--                                    vitae, interdum sed-->
-<!--                                    tortor.-->
-<!--                                </p>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--            <section class="services-section">-->
-<!--                <h6 class="section-subtitle">WHAT I DO</h6>-->
-<!--                <h2 class="section-title">SERVICES</h2>-->
-<!--                <div class="row">-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/001-target.svg" alt="target">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">web designing</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/003-idea.svg" alt="bulb">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">Graphic design</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/002-development.svg" alt="development">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">Development</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="media service-card col-lg-6">-->
-<!--                        <div class="service-icon">-->
-<!--                            <img src="assets/images/004-smartphone.svg" alt="smartphone">-->
-<!--                        </div>-->
-<!--                        <div class="media-body">-->
-<!--                            <h5 class="service-title">Mobile design</h5>-->
-<!--                            <p class="service-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed-->
-<!--                                tortor.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--            <section class="testimonial-section">-->
-<!--                <div id="testimonialCarousel" class="testimonial-carousel carousel slide" data-ride="carousel">-->
-<!--                    <div class="carousel-inner">-->
-<!--                        <div class="carousel-item active">-->
-<!--                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,-->
-<!--                                interdum sed tortor.</p>-->
-<!--                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">-->
-<!--                            <p class="testimonial-name">Nout Golstein</p>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,-->
-<!--                                interdum sed tortor.</p>-->
-<!--                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">-->
-<!--                            <p class="testimonial-name">Nout Golstein</p>-->
-<!--                        </div>-->
-<!--                        <div class="carousel-item">-->
-<!--                            <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,-->
-<!--                                interdum sed tortor.</p>-->
-<!--                            <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">-->
-<!--                            <p class="testimonial-name">Nout Golstein</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <ol class="carousel-indicators">-->
-<!--                        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>-->
-<!--                        <li data-target="#testimonialCarousel" data-slide-to="1"></li>-->
-<!--                        <li data-target="#testimonialCarousel" data-slide-to="2"></li>-->
-<!--                    </ol>-->
-<!--                </div>-->
-<!--            </section>-->
-
-            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2022</footer>
-        </main>
+        </div>
     </div>
-    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/live-resume.js"></script>
-    <script>
-    function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
 
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-    </script>
+    <section class="intro">
+        <p>I am an Assistant Professor (Tenure Track) in the <a href="https://di.ku.dk/english/research/nlp/">Department of Computer Science, AI Section at the University of Copenhagen</a>. I co-lead the <a href="http://www.copenlu.com/">CopeNLU group</a>.</p>
+    </section>
+
+    <section>
+        <h2>Research</h2>
+        <div class="research-item">
+            <h3>Interpretability of Language Models</h3>
+            <p>Understanding mechanisms of LLMs with applications to context usage and parametric knowledge.</p>
+        </div>
+        <div class="research-item">
+            <h3>Explainability Methods</h3>
+            <p>Designing robust and user-aligned explainability techniques for complex models.</p>
+        </div>
+        <div class="research-item">
+            <h3>Factuality in LMs</h3>
+            <p>Addressing the challenge of maintaining factual accuracy in language models.</p>
+        </div>
+    </section>
+
+<!--    <section>-->
+<!--        <h2>Opportunities</h2>-->
+<!--        <p>There are opportunities to apply to Danish funding agencies for PhD and Postdoc positions within the group, as well as for visiting researchers. I supervise Master's and Bachelor's students from the University of Copenhagen. See <a href="contact.html">Contact</a> for details.</p>-->
+<!--    </section>-->
+
+<!--    <section>-->
+<!--        <h2>Awards</h2>-->
+<!--        <div class="award">-->
+<!--            <strong>ELLIS Best PhD Thesis Award (2023)</strong>-->
+<!--            <span>One of two recipients for "Accountable and Explainable Methods for Complex Reasoning over Text"</span>-->
+<!--        </div>-->
+<!--        <div class="award">-->
+<!--            <strong>Informatics Europe Best Dissertation Award (2023)</strong>-->
+<!--            <span>Outstanding PhD dissertation with opportunity to publish in Springer series</span>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <section>
+        <h2>Recent News</h2>
+        <div class="news-item">
+
+        <div class="news-item">
+            <span class="news-date">May 2026</span>
+            Received DFF-Research Project 2 grant for "A Mechanistic Framework for Mitigating the Susceptibility of LLMs to Learning False Information". <a href="https://www.copenlu.com/news/funded-phd-and-postdoc-positions-for-start-in-autumn-2026/">PhD and Postdoc positions available</a>.
+        </div>
+
+            <div class="news-item">
+            <span class="news-date">May 2026</span>
+            Selected to serve as Publication Chair for <a href="https://2027.eacl.org/">EACL 2027</a>.
+        </div>
+            <span class="news-date">March 2026</span>
+            Selected to serve as Secretary to <a href="https://www.sigrep.org/">SIGREP 2026-2028</a>.
+        </div>
+        <div class="news-item">
+            <span class="news-date">March 2026</span>
+            Selected to serve as Industry Track Chair for <a href="https://2026.emnlp.org/">EMNLP 2026</a>.
+        </div>
+
+        <div class="news-item">
+            <span class="news-date">March 2026</span>
+            Invited talk at Aurora Huawei Summit in Helsinki "When Explanations Lie" at the <a href="https://llmsafety-unconference.github.io/">LLM Safety Workshop</a> [<a href="slides/explanation_lies.pdf">Slides</a>]
+        </div>
+        <div class="news-item">
+            <span class="news-date">December 2025</span>
+            Invited talk at ELLIS Unconference "When Explanations Lie" at the <a href="https://llmsafety-unconference.github.io/">LLM Safety Workshop</a> [<a href="slides/explanation_lies.pdf">Slides</a>]
+        </div>
+        <div class="news-item">
+            <span class="news-date">November 2025</span>
+            Talk at <a href="https://event.ing.dk/dts5">Digital Tech Summit</a> on "Reality Check of LLM-driven Fact Verification" [<a href="slides/DTS_2025.pdf">Slides</a>]
+        </div>
+    </section>
+
+    <footer>
+        Pepa Atanasova - University of Copenhagen
+    </footer>
 </body>
-
 </html>

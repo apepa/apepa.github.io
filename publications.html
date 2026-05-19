@@ -1,243 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-#myBtnContainer{
-    margin-left: 15px;
-    margin-bottom: 20px;
-}
-.filterDiv {
-  display: none !important;
-}
-.filterDiv.show {
-  display: block !important;
-}
-.container {
-  margin-top: 20px;
-  overflow: visible;
-}
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 14px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 500;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  margin-right: 8px;
-  margin-bottom: 8px;
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-}
-.btn.active {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-  color: white;
-  transform: scale(1.05);
-}
-</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pepa Atanasova :: Publications</title>
-    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/live-resume.css">
-    <link rel="stylesheet" href="assets/css/custom-academic.css">
+    <title>Pepa Atanasova - Publications</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header { margin-bottom: 2rem; }
+        nav { margin-bottom: 1.5rem; }
+        nav a { margin-right: 1.5rem; color: #555; font-size: 0.9rem; }
+        nav a:hover, nav a.active { color: #000; }
+        .profile { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem; }
+        .profile img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+        .profile-info h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .profile-info p { color: #666; margin-bottom: 0.2rem; }
+        .social-links { margin-top: 0.5rem; }
+        .social-links a { margin-right: 1rem; color: #666; }
+        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.2rem; margin-bottom: 1rem; color: #000; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .metrics { display: flex; gap: 2rem; margin-bottom: 2rem; }
+        .metric { text-align: center; }
+        .metric-value { font-size: 1.5rem; font-weight: bold; }
+        .metric-label { font-size: 0.85rem; color: #666; }
+        .filters { margin-bottom: 1.5rem; }
+        .filters button { padding: 0.4rem 0.8rem; margin-right: 0.5rem; margin-bottom: 0.5rem; border: 1px solid #ddd; background: #fff; border-radius: 3px; cursor: pointer; font-size: 0.85rem; }
+        .filters button:hover, .filters button.active { background: #0066cc; color: #fff; border-color: #0066cc; }
+        .pub { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #f0f0f0; }
+        .pub:last-child { border-bottom: none; }
+        .pub-venue { color: #666; font-size: 0.9rem; }
+        .pub-links { font-size: 0.85rem; }
+        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
+        @media (max-width: 600px) {
+            nav a { display: inline-block; margin: 0.3rem 0.8rem 0.3rem 0; }
+            .metrics { flex-wrap: wrap; gap: 1rem; }
+            .profile { flex-direction: column; align-items: center; text-align: center; }
+            .profile img { width: 120px; height: 120px; }
+        }
+    </style>
 </head>
-
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="publications.html" class="nav-link active">PUBLICATIONS</a>
-            <a href="teaching.html" class="nav-link">TEACHING</a>
-            <a href="service.html" class="nav-link">SERVICE</a>
-            <a href="talks.html" class="nav-link">TALKS</a>
-            <a href="https://www.copenlu.com/" class="nav-link">GROUP</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
-
-
+            <a href="index.html">Home</a>
+            <a href="publications.html" class="active">Publications</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="service.html">Service</a>
+            <a href="talks.html">Talks</a>
+            <a href="https://www.copenlu.com/">Group</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div class="content-wrapper">
-        <aside>
-            <div class="profile-img-wrapper">
-                <img src="assets/images/Profile.png" alt="profile">
+
+    <div class="profile">
+        <img src="assets/images/Profile.jpg" alt="Pepa Atanasova">
+        <div class="profile-info">
+            <h1>Pepa Atanasova</h1>
+            <p>Assistant Professor (Tenure Track)</p>
+            <p><a href="https://di.ku.dk/">Department of Computer Science</a></p>
+            <p><a href="http://www.copenlu.com/">CopeNLU Group</a></p>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=CLOC3rEAAAAJ&hl=en">Scholar</a>
+                <a href="https://github.com/apepa/">GitHub</a>
+                <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/">LinkedIn</a>
+                <a href="mailto:pepa@di.ku.dk">Email</a>
+                <a href="CV_20_06_2025.pdf">CV</a>
             </div>
-            <h1 class="profile-name">Pepa Atanasova</h1>
-           <div class="text-center">
-                <span class="badge badge-white badge-pill profile-designation">Assistant Professor</span>
-<!--                <span class="badge badge-white badge-pill profile-designation"><a href="https://talent.ku.dk/about-the-doctoral-programme/">TALENT Doctoral Programme</a></span>-->
-                <span class="badge badge-white badge-pill profile-designation"><a href="http://www.copenlu.com/">CopeNLU group</a></span>
-                <span class="badge badge-white badge-pill profile-designation"><a href="https://di.ku.dk/">Department of Computer Science</a></span>
-<!--                <span class="badge badge-white badge-pill profile-designation"><img src="assets/images/download.svg" alt="download" class="btn-img"><a href="https://drive.google.com/file/d/1DB8o4ASATDgEN0GMElRMNJSsYlBspWM8/view?usp=sharing" download="PepaAtanasovaCV.pdf" target="_blank">DOWNLOAD CV</a></span>-->
-            </div>
-            <nav class="social-links">
-                <a href="https://scholar.google.com/citations?user=CLOC3rEAAAAJ&hl=en" class="social-link"><i class="fab fa-scholar"></i></a>
-                <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/apepa/" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://orcid.org/0000-0002-0023-2616" class="social-link"><i class="fab fa-orcid"></i></a>
-                <a href="https://twitter.com/atanasovapepa" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://bsky.app/profile/apepa.bsky.social" class="social-link bluesky-link"><i class="fab fa-bluesky"></i></a>
-                <a></a>
-                <a href="mailto:pepa@di.ku.dk" class="social-link" title="Send email"><i class="fas fa-envelope"></i></a>
-            </nav>
-            <div class="text-center">
-                <a href="CV_20_06_2025.pdf" class="cv-download-btn" target="_blank">📄 Download CV</a>
-            </div>
-        </aside>
-        <main>
-         <!-- Publication Metrics Section -->
-         <section class="metrics-section">
-            <h2 class="section-title">Publication Metrics</h2>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">📊</div>
-                    <div class="metric-value">2800+</div>
-                    <div class="metric-label">Citations</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">📚</div>
-                    <div class="metric-value">40+</div>
-                    <div class="metric-label">Publications</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon">🎯</div>
-                    <div class="metric-value">22</div>
-                    <div class="metric-label">h-index</div>
-                </div>
-<!--                <div class="metric-card">-->
-<!--                    <div class="metric-icon">🏆</div>-->
-<!--                    <div class="metric-value">5</div>-->
-<!--                    <div class="metric-label">Best Paper Awards</div>-->
-<!--                </div>-->
-            </div>
-         </section>
-         
-         <section class="intro-section">
-            <!-- Control buttons -->
-            <div id="myBtnContainer">
-              <button class="btn active" onclick="filterSelection('all')"> Show All</button>
-              <button class="btn" onclick="filterSelection('selected')"> Selected</button>
-              <button class="btn" onclick="filterSelection('explainability')"> Explainability</button>
-                <button class="btn" onclick="filterSelection('mechinterp')"> Mechanistic Interpretability</button>
-              <button class="btn" onclick="filterSelection('factchecking')"> Factuality</button>
-<!--              <button class="btn" onclick="filterSelection('checkworthiness')"> Check-worthiness</button>-->
-            </div>
-            <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-            <div class="container">
-                <div class="filterDiv explainability mechinterp">Sekh Mainul Islam, <b>Pepa Atanasova</b>, Isabelle Augenstein <a href=https://arxiv.org/pdf/2511.01706">Multi-Step Knowledge Interaction Analysis via Rank-2 Subspace Disentanglement.</a> </br></div>
-                <div class="filterDiv explainability">Jingyi Sun, <b>Pepa Atanasova</b>, Sagnik Ray Choudhury, Sekh Mainul Islam, Isabelle Augenstein <a href=https://arxiv.org/pdf/2510.02629?">Evaluation Framework for Highlight Explanations of Context Utilisation in Language Models.</a> </br></div>
-                <div class="filterDiv explainability selected">Yingming Wang, <b>Pepa Atanasova</b> <a href=https://aclanthology.org/2025.emnlp-main.427.pdf">Self-Critique and Refinement for Faithful Natural Language Explanations.</a>, In EMNLP 2025 </br></div>
-                <div class="filterDiv explainability">Shuzhou Yuan, Jingyi Sun, Ran Zhang, Michael Färber, Steffen Eger, <b>Pepa Atanasova</b>, Isabelle Augenstein <a href="https://aclanthology.org/2025.emnlp-main.1494/">Graph-Guided Textual Explanation Generation Framework.</a>, In EMNLP 2025 </br></div>
-                <div class="filterDiv factchecking mechinterp selected">Lovisa Hagström, Sara Vera Marjanović, Haeun Yu, Arnav Arora, Christina Lioma, Maria Maistro, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2412.17031">A Reality Check on Context Utilisation for Retrieval-Augmented Generation.</a> In ACL 2025. </br></div>
-
-
-                <div class="filterDiv mechinterp selected">Sara Vera Marjanović, Haeun Yu, <b>Pepa Atanasova</b>, Maria Maistro, Christina Lioma, Isabelle Augenstein. <a href="https://aclanthology.org/2024.findings-emnlp.838/">From Internal Conflict to Contextual Adaptation of Language Models.</a> In Findings of EMNLP 2024. </br></div>
-                <div class="filterDiv explainability">Jingyi Sun, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2406.15085">A Unified Framework for Input Feature Attribution Analysis.</a></br></div>
-
-                <div class="filterDiv mechinterp selected">Haeun Yu, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://aclanthology.org/2024.acl-long.444/">Revealing the Parametric Knowledge of Language Models: A Unified Framework for Attribution Methods.</a> Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (<a href="https://2024.aclweb.org/">ACL 2024</a>), August 2024. </br></div>
-
-                <div class="filterDiv explainability factchecking">Sagnik Ray Choudhury, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2310.13506.pdf">Explaining Interactions Between Text Spans.</a> In Proceedings of the 2023 Conference on Empirical Methods in Natural Langual Processing (<a href="https://2023.emnlp.org/">EMNLP 2023</a>), December 2023. <a href="https://github.com/copenlu/spanex">[Code]</a> <a href="https://huggingface.co/datasets/copenlu/spanex">[Dataset]</a> </br></div>
-
-                <div class="filterDiv explainability selected"><b>Pepa Atanasova</b>, Oana-Maria Camburu, Christina Lioma, Thomas Lukasiewicz, Jakob Grue Simonsen, Isabelle Augenstein. <a href="https://aclanthology.org/2023.acl-short.25/">Faithfulness Tests for Natural Language Explanations.</a> In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (<a href="https://2023.aclweb.org/">ACL 2023</a>), July 2023. <a href="https://github.com/copenlu/nle_faithfulness">[Code]</a> </br></div>
-
-              <div class="filterDiv factchecking explainability"><b>Pepa Atanasova</b> <a href="https://arxiv.org/pdf/2211.04946.pdf">Accountable and Explainable Methods for Complex Reasoning over Text</a>. Thesis presented to the University of Copenhagen Faculty of Science in fulfillment of the requirements for the degree of Doctor of Philosophy (Ph.D.), November 2022.</br></div>
-              <div class="filterDiv explainability factchecking selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00486/112498/Fact-Checking-with-Insufficient-Evidence">Fact Checking with Insufficient Evidence.</a> Transactions of the Association for Computational Linguistics (2022) <a href="https://direct.mit.edu/tacl">(TACL-2022)</a>, July, 2022</br></div>
-              <div class="filterDiv explainability"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21287">Diagnostics-Guided Explanation Generation.</a> In Proceeding sof the Thirty-Sixth AAAI Conference on Artificial Intelligence <a href="https://aaai.org/Conferences/AAAI-22/">(AAAI-2022)</a>, February, 2022</br></div>
-              <div class="filterDiv">Luna De Bruyne, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.sciencedirect.com/science/article/pii/S0885230821000644?casa_token=KKR8DRzz4ToAAAAA:PIVFexBd46e3kG2d9v-9diPyVsD1ZMNQetl0I3mUP8OBJKe0ojxn5ZjC-YDXoFeFoww4ZBZZFA">Joint Emotion Label Space Modelling for Affect Lexica.</a> Computer Speech & Language, <a href="https://www.sciencedirect.com/journal/computer-speech-and-language/vol/71/suppl/C">(volume 71)</a>, January 2022</br></div>
-
-              <div class="filterDiv factchecking explainability">Shailza Jolly, <b>Pepa Atanasova</b>, and Isabelle Augenstein. <a href="https://arxiv.org/abs/2112.06924https://www.mdpi.com/2078-2489/13/10/500">Generating Fluent Fact Checking Explanations with Unsupervised Post-Editing</a>. MDPI JOURNAL, Special Issue Advances in Explainable Artificial Intelligence, October 2022.</br></div>
-              <div class="filterDiv factchecking explainability">Wojciech Ostrowski, Arnav Arora, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.ijcai.org/proceedings/2021/0536.pdf">Multi-Hop Fact Checking of Political Claims.</a> Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence <a href="https://ijcai-21.org/">(IJCAI-21)</a>, August 2021 <a href="https://github.com/copenlu/politihop">[Dataset]</a> </br></div>
-              <div class="filterDiv">Sara Rosenthal, <b>Pepa Atanasova</b>, Georgi Karadzhov, Marcos Zampieri, Preslav Nakov. <a href="https://aclanthology.org/2021.findings-acl.80/">SOLID: A Large-Scale Semi-Supervised Dataset for Offensive Language Identification.</a> Findings of the Association for Computational Linguistics <a href="https://aclanthology.org/events/acl-2021/">(ACL-IJCNLP 2021)</a>, August 2021 <a href="https://zenodo.org/record/3950379#.YcnnkhPMI-S">[Dataset]</a> </br></div>
-
-
-             <div class="filterDiv explainability"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://aclanthology.org/2020.emnlp-main.263">A Diagnostic Study of Explainability Techniques for Text Classification.</a> In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP 2020</a>), November 2020. <a href="https://slideslive.com/38938813">[Video]</a> <a href="https://github.com/copenlu/xai-benchmark">[Code]</a> </br></div>
-             <div class="filterDiv factchecking explainability"><b>Pepa Atanasova</b><sup>*</sup>, Dustin Wright<sup>*</sup>, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.emnlp-main.256/">Generating Label Cohesive and Well-Formed Adversarial Claims</a>. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP 2020</a>), November 2020. <a href="https://github.com/copenlu/fever-adversarial-attacks">[Code]</a> </br></div>
-              <div class="filterDiv factchecking explainability"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.acl-main.656/">Generating Fact Checking Explanations.</a> In Proceedings of 2020 Annual Conference of the Association for Computational Linguistics (<a href="https://acl2020.org/">ACL 2020</a>), July 2020. <a href="http://slideslive.com/38929094">[Video]</a> </br></div>
-              <div class="filterDiv">Marcos Zampieri, Preslav Nakov, Sara Rosenthal, <b>Pepa Atanasova</b>, Georgi Karadzhov, Hamdy Mubarak, Leon Derczynski, Zeses Pitenis, Çağrı Çöltekin <a href="https://aclanthology.org/2020.semeval-1.188/">SemEval-2020 Task 12: Multilingual Offensive Language Identification in Social Media.</a> In Proceedings of the Fourteenth Workshop on Semantic Evaluation (<a href="https://alt.qcri.org/semeval2020/index.php?id=tasks">SemEval 2020</a>), December 2020.<a href="https://sites.google.com/site/offensevalsharedtask/results-and-paper-submission">[Shared Task]</a> </br></div>
-
-            <div class="filterDiv checkworthiness factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Georgi Karadzhov, Mitra Mohtarami, Giovanni Da San Martino. <a href="http://ceur-ws.org/Vol-2380/paper_269.pdf">Overview of the CLEF-2019 CheckThat! Lab: Automatic Identification and Verification of Claims. Task 1: Check-Worthiness.</a> In Conference and Labs of the Evaluation Forum (<a href="http://clef2019.clef-initiative.eu/">CLEF 2019</a>), September 2019. <a href="https://github.com/apepa/clef2019-factchecking-task1">[Shared Task, Dataset]</a> </br></div>
-            <div class="filterDiv checkworthiness factchecking">Slavena Vasileva, <b>Pepa Atanasova</b>, Lluís Màrquez, Alberto Barrón-Cedeño, Preslav Nakov. <a href="https://aclanthology.org/R19-1141/">It Takes Nine to Smell a Rat: Neural Multi-Task Learning for Check-Worthiness Prediction.</a> In Proceedings of the International Conference on Recent Advances in Natural Language Processing (<a href="http://ranlp.org/archive/ranlp2019/start.php">RANLP 2019</a>), September 2019.</a></br></div>
-            <div class="filterDiv factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Georgi Karadzhov, Tsvetomila Mihaylova, Mitra Mohtarami, James Glass. <a href="https://dl.acm.org/doi/abs/10.1145/3297722">Automatic Fact-Checking Using Context and Discourse Information.</a> In Journal of Data and Information Quality (<a href="https://dl.acm.org/toc/jdiq/2019/11/3">JDIQ Vol 11, No. 3 2019</a>), July 2019.</a></br></div>
-            <div class="filterDiv"><b>Pepa Atanasova</b>, Georgi Karadzhov, Yasen Kiprov, Preslav Nakov, Fabrizio Sebastiani. <a href="https://dl.acm.org/doi/abs/10.1145/3331184.3331308">Evaluating Variable-Length Multiple-Option Lists in Chatbots and Mobile Search.</a> In Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (<a href="https://sigir.org/sigir2019/">SIGIR 2019</a>), July 2019.</a></br></div>
-            <div class="filterDiv factchecking">Tsvetomila Mihaylova, Georgi Karadzhov, <b>Pepa Atanasova</b>, Ramy Baly, Mitra Mohtarami, Preslav Nakov. <a href="https://aclanthology.org/S19-2149/">SemEval-2019 Task 8: Fact Checking in Community Question Answering Forums.</a> In Proceedings of the Proceedings of the 13th International Workshop on Semantic Evaluation (<a href="https://alt.qcri.org/semeval2019/">SemEval 2019</a>), July 2019.</a></br></div>
-
-            <div class="filterDiv checkworthiness factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Georgi Karadzhov, Mitra Mohtarami, Giovanni Da San Martino. <a href="http://ceur-ws.org/Vol-2125/invited_paper_13.pdf">Overview of the CLEF-2018 CheckThat! Lab on Automatic Identification and Verification of Political Claims. Task 1: Check-Worthiness.</a> In Conference and Labs of the Evaluation Forum (<a href="http://clef2018.clef-initiative.eu/">CLEF 2018</a>), September 2018. <a href="https://github.com/clef2018-factchecking/clef2018-factchecking">[Shared Task, Dataset]</a> </br></div>
-            <div class="filterDiv checkworthiness factchecking">Israa Jaradat, <b>Pepa Atanasova</b>, Alberto Barrón-Cedeño, Lluís Màrquez, Preslav Nakov. <a href="https://aclanthology.org/N18-5006/">ClaimRank: Detecting Check-Worthy Claims in Arabic and English. Task 1: Check-Worthiness.</a> In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Demonstrations (<a href="http://naacl.org/naacl-hlt-2018/">NAACL 2018</a>), June 2018. </br></div>
-
-              <div class="filterDiv checkworthiness factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Ivan Koychev. <a href="https://aclanthology.org/R17-1037/">A Context-aware Approach for Detecting Worth-checking Claims in Political Debates.</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. </br></div>
-              <div class="filterDiv factchecking">Georgi Karadzhov, <b>Pepa Gencheva</b>, Preslav Nakov, Ivan Koychev. <a href="https://aclanthology.org/R17-1037/">We Built a Fake News / Click Bait Filter: What Happened Next Will Blow Your Mind!.</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. The paper describes our system that won the <b>first place</b> at a hackathon “Hack the Fake News”.</br></div>
-              <div class="filterDiv">Venelin Kovatchev, Irina Temnikova, <b>Pepa Atanasova</b>, Yasen Kiprov, Ivelina Nikolova. <a href="https://aclanthology.org/volumes/R17-2/">Proceedings of the Student Research Workshop Associated with RANLP 2017 .</a> In Proceedings of the International Conference Recent Advances in Natural Language Processing, <a href="http://lml.bas.bg/ranlp2017/start.php">(RANLP 2017)</a>, August 2017. </br></div>
-               <div class="filterDiv">Yasen Kiprov, <b>Pepa Atanasova</b>, Ivan Koychev. <a https://dl.acm.org/doi/abs/10.1145/3099023.3099048">Generating labeled datasets of twitter users.</a> In Proceedings of the 25th Conference on User Modeling, Adaptation and Personalization, <a href="https://www.um.org/umap2017/index.html">(UMAP 2017)</a>, August 2017. </br></div>
-                <div class="filterDiv">Momchil Hardalov, <b>Pepa Atanasova</b>, Todor Mihaylov, Galia Angelova, Kiril Simov, Petya Osenova, Veselin Stoyanov, Ivan Koychev, Preslav Nakov, Dragomir Radev. <a href="https://aclanthology.org/2023.acl-long.487/">bgGLUE: A Bulgarian General Language Understanding Evaluation Benchmark.</a> In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (<a href="https://2023.aclweb.org/">ACL 2023</a>), July 2023. <a href="https://bgglue.github.io/">[Benchmark]</a> </br></div>
-
-            <div class="filterDiv">Tsvetomila Mihaylova, <b>Pepa Gencheva</b>, Martin Boyanov, Ivana Yovcheva, Todor Mihaylov, Momchil Hardalov, Yasen Kiprov, Daniel Balchev, Ivan Koychev, Preslav Nakov, Ivelina Nikolova, Galia Angelova. <a href="https://aclanthology.org/S16-1129/">SUper Team at SemEval-2016 Task 3: Building a Feature-Rich System for Community Question Answering.</a> In Proceedings of the 10th International Workshop on Semantic Evaluation (SemEval-2016) (<a href="https://alt.qcri.org/semeval2016/">SemEval 2016</a>), June 2016. <b>First Place.</b></a></br></div>
-            </div>
-            </section>
-
-
-            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2022</footer>
-        </main>
+        </div>
     </div>
-    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/live-resume.js"></script>
+
+    <h2>Publications</h2>
+
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-value">3,359</div>
+            <div class="metric-label">Citations</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">46</div>
+            <div class="metric-label">Publications</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">24</div>
+            <div class="metric-label">h-index</div>
+        </div>
+    </div>
+
+    <div class="filters">
+        <button class="active" onclick="filterSelection('all')">All</button>
+        <button onclick="filterSelection('selected')">Selected</button>
+        <button onclick="filterSelection('explainability')">Explainability</button>
+        <button onclick="filterSelection('mechinterp')">Mechanistic Interpretability</button>
+        <button onclick="filterSelection('factchecking')">Factuality</button>
+    </div>
+
+    <section id="publications">
+        <!-- 2026 -->
+        <div class="pub filterDiv explainability">Jingyi Sun, <b>Pepa Atanasova</b>, Sagnik Ray Choudhury, Sekh Mainul Islam, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2510.02629">Evaluation Framework for Highlight Explanations of Context Utilisation in Language Models.</a> <span class="pub-venue">Computational Linguistics, 2026</span></div>
+
+        <!-- 2025 -->
+        <div class="pub filterDiv explainability mechinterp">Sekh Mainul Islam, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2511.01706">Multi-Step Knowledge Interaction Analysis via Rank-2 Subspace Disentanglement.</a> <span class="pub-venue">arXiv, 2025</span></div>
+
+        <div class="pub filterDiv explainability selected">Yingming Wang, <b>Pepa Atanasova</b>. <a href="https://aclanthology.org/2025.emnlp-main.427.pdf">Self-Critique and Refinement for Faithful Natural Language Explanations.</a> <span class="pub-venue">EMNLP 2025</span></div>
+
+        <div class="pub filterDiv explainability">Shuzhou Yuan, Jingyi Sun, Ran Zhang, Michael Färber, Steffen Eger, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://aclanthology.org/2025.emnlp-main.1494/">Graph-Guided Textual Explanation Generation Framework.</a> <span class="pub-venue">EMNLP 2025</span></div>
+
+        <div class="pub filterDiv factchecking mechinterp selected">Lovisa Hagström, Sara Vera Marjanović, Haeun Yu, Arnav Arora, Christina Lioma, Maria Maistro, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2412.17031">A Reality Check on Context Utilisation for Retrieval-Augmented Generation.</a> <span class="pub-venue">ACL 2025</span></div>
+
+        <div class="pub filterDiv explainability">Jingyi Sun, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://aclanthology.org/2025.naacl-long.530/">Evaluating Input Feature Explanations Through a Unified Diagnostic Evaluation Framework.</a> <span class="pub-venue">NAACL 2025</span></div>
+
+        <div class="pub filterDiv">Lucie-Aimée Kaffee, <b>Pepa Atanasova</b>, Anna Rogers. <a href="#">Local Differences, Global Lessons: Insights from Organisation Policies for International Legislation.</a> <span class="pub-venue">NeurIPS 2025</span></div>
+
+        <!-- 2024 -->
+        <div class="pub filterDiv mechinterp selected">Sara Vera Marjanović, Haeun Yu, <b>Pepa Atanasova</b>, Maria Maistro, Christina Lioma, Isabelle Augenstein. <a href="https://aclanthology.org/2024.findings-emnlp.838/">DYNAMICQA: Tracing Internal Knowledge Conflicts in Language Models.</a> <span class="pub-venue">EMNLP 2024</span></div>
+
+        <div class="pub filterDiv mechinterp selected">Haeun Yu, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://aclanthology.org/2024.acl-long.444/">Revealing the Parametric Knowledge of Language Models: A Unified Framework for Attribution Methods.</a> <span class="pub-venue">ACL 2024</span></div>
+
+        <!-- 2023 -->
+        <div class="pub filterDiv explainability factchecking">Sagnik Ray Choudhury, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/pdf/2310.13506.pdf">Explaining Interactions Between Text Spans.</a> <span class="pub-venue">EMNLP 2023</span> <span class="pub-links">[<a href="https://github.com/copenlu/spanex">Code</a>]</span></div>
+
+        <div class="pub filterDiv explainability selected"><b>Pepa Atanasova</b>, Oana-Maria Camburu, Christina Lioma, Thomas Lukasiewicz, Jakob Grue Simonsen, Isabelle Augenstein. <a href="https://aclanthology.org/2023.acl-short.25/">Faithfulness Tests for Natural Language Explanations.</a> <span class="pub-venue">ACL 2023</span> <span class="pub-links">[<a href="https://github.com/copenlu/nle_faithfulness">Code</a>]</span></div>
+
+        <div class="pub filterDiv">Momchil Hardalov, <b>Pepa Atanasova</b>, Todor Mihaylov, Galia Angelova, Kiril Simov, Petya Osenova, et al. <a href="https://aclanthology.org/2023.acl-long.487/">bgGLUE: A Bulgarian General Language Understanding Evaluation Benchmark.</a> <span class="pub-venue">ACL 2023</span> <span class="pub-links">[<a href="https://bgglue.github.io/">Benchmark</a>]</span></div>
+
+        <!-- 2022 -->
+        <div class="pub filterDiv factchecking explainability"><b>Pepa Atanasova</b>. <a href="https://arxiv.org/pdf/2211.04946.pdf">Accountable and Explainable Methods for Complex Reasoning over Text.</a> <span class="pub-venue">PhD Thesis, 2022</span></div>
+
+        <div class="pub filterDiv explainability factchecking selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00486/112498/Fact-Checking-with-Insufficient-Evidence">Fact Checking with Insufficient Evidence.</a> <span class="pub-venue">TACL 2022</span></div>
+
+        <div class="pub filterDiv explainability"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21287">Diagnostics-Guided Explanation Generation.</a> <span class="pub-venue">AAAI 2022</span></div>
+
+        <div class="pub filterDiv">Luna De Bruyne, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.sciencedirect.com/science/article/pii/S0885230821000644">Joint Emotion Label Space Modelling for Affect Lexica.</a> <span class="pub-venue">Computer Speech & Language, 2022</span></div>
+
+        <div class="pub filterDiv factchecking explainability">Shailza Jolly, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://arxiv.org/abs/2112.06924">Generating Fluent Fact Checking Explanations with Unsupervised Post-Editing.</a> <span class="pub-venue">Information, 2022</span></div>
+
+        <!-- 2021 -->
+        <div class="pub filterDiv factchecking explainability">Wojciech Ostrowski, Arnav Arora, <b>Pepa Atanasova</b>, Isabelle Augenstein. <a href="https://www.ijcai.org/proceedings/2021/0536.pdf">Multi-Hop Fact Checking of Political Claims.</a> <span class="pub-venue">IJCAI 2021</span> <span class="pub-links">[<a href="https://github.com/copenlu/politihop">Dataset</a>]</span></div>
+
+        <div class="pub filterDiv">Sara Rosenthal, <b>Pepa Atanasova</b>, Georgi Karadzhov, Marcos Zampieri, Preslav Nakov. <a href="https://aclanthology.org/2021.findings-acl.80/">SOLID: A Large-Scale Semi-Supervised Dataset for Offensive Language Identification.</a> <span class="pub-venue">Findings of ACL 2021</span></div>
+
+        <!-- 2020 -->
+        <div class="pub filterDiv">Marcos Zampieri, Preslav Nakov, Sara Rosenthal, <b>Pepa Atanasova</b>, Georgi Karadzhov, et al. <a href="https://aclanthology.org/2020.semeval-1.188/">SemEval-2020 Task 12: Multilingual Offensive Language Identification in Social Media (OffensEval 2020).</a> <span class="pub-venue">SemEval 2020</span></div>
+
+        <div class="pub filterDiv explainability selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://aclanthology.org/2020.emnlp-main.263">A Diagnostic Study of Explainability Techniques for Text Classification.</a> <span class="pub-venue">EMNLP 2020</span> <span class="pub-links">[<a href="https://github.com/copenlu/xai-benchmark">Code</a>]</span></div>
+
+        <div class="pub filterDiv factchecking explainability"><b>Pepa Atanasova</b>*, Dustin Wright*, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.emnlp-main.256/">Generating Label Cohesive and Well-Formed Adversarial Claims.</a> <span class="pub-venue">EMNLP 2020</span> <span class="pub-links">[<a href="https://github.com/copenlu/fever-adversarial-attacks">Code</a>]</span></div>
+
+        <div class="pub filterDiv factchecking explainability selected"><b>Pepa Atanasova</b>, Jakob Grue Simonsen, Christina Lioma, Isabelle Augenstein. <a href="https://www.aclweb.org/anthology/2020.acl-main.656/">Generating Fact Checking Explanations.</a> <span class="pub-venue">ACL 2020</span></div>
+
+        <!-- 2019 -->
+        <div class="pub filterDiv factchecking"><b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Georgi Karadzhov, Tsvetomila Mihaylova, Mitra Mohtarami, James Glass. <a href="https://dl.acm.org/doi/abs/10.1145/3297722">Automatic Fact-Checking Using Context and Discourse Information.</a> <span class="pub-venue">JDIQ 2019</span></div>
+
+        <div class="pub filterDiv factchecking">Tsvetomila Mihaylova, Georgi Karadzhov, <b>Pepa Atanasova</b>, Ramy Baly, Mitra Mohtarami, Preslav Nakov. <a href="https://aclanthology.org/S19-2149/">SemEval-2019 Task 8: Fact Checking in Community Question Answering Forums.</a> <span class="pub-venue">SemEval 2019</span></div>
+
+        <div class="pub filterDiv factchecking">Tamer Elsayed, Preslav Nakov, Alberto Barrón-Cedeño, Maram Hasanain, et al. <a href="#">Overview of the CLEF-2019 CheckThat! Lab: Automatic Identification and Verification of Claims.</a> <span class="pub-venue">CLEF 2019</span></div>
+
+        <div class="pub filterDiv factchecking">Slavena Vasileva, <b>Pepa Atanasova</b>, Lluís Màrquez, Alberto Barrón-Cedeño, Preslav Nakov. <a href="https://aclanthology.org/R19-1154/">It Takes Nine to Smell a Rat: Neural Multi-task Learning for Check-worthiness Prediction.</a> <span class="pub-venue">RANLP 2019</span></div>
+
+        <!-- 2018 -->
+        <div class="pub filterDiv factchecking">Preslav Nakov, Alberto Barrón-Cedeño, Tamer Elsayed, Reem Suwaileh, Lluís Màrquez, et al. <a href="#">Overview of the CLEF-2018 CheckThat! Lab on Automatic Identification and Verification of Political Claims.</a> <span class="pub-venue">CLEF 2018</span></div>
+
+        <div class="pub filterDiv factchecking">Israa Jaradat, <b>Pepa Atanasova</b>, Alberto Barrón-Cedeño, Lluís Màrquez, Preslav Nakov. <a href="https://aclanthology.org/N18-2017/">ClaimRank: Detecting Check-worthy Claims in Arabic and English.</a> <span class="pub-venue">NAACL 2018</span></div>
+
+        <div class="pub filterDiv">Georgi Karadzhov, <b>Pepa Atanasova</b>, Preslav Nakov, Ivan Koychev. <a href="#">We Built a Fake News & Click-bait Filter: What Happened Next Will Blow Your Mind!</a> <span class="pub-venue">RANLP 2018</span></div>
+
+        <!-- 2017 -->
+        <div class="pub filterDiv factchecking selected"><b>Pepa Atanasova</b>, Preslav Nakov, Lluís Màrquez, Alberto Barrón-Cedeño, Ivan Koychev. <a href="https://aclanthology.org/R17-1037/">A Context-aware Approach for Detecting Worth-checking Claims in Political Debates.</a> <span class="pub-venue">RANLP 2017</span></div>
+
+        <!-- 2016 -->
+        <div class="pub filterDiv">Tsvetomila Mihaylova, <b>Pepa Atanasova</b>, Momchil Boyanov, et al. <a href="https://aclanthology.org/S16-1129/">SUper Team at SemEval-2016 Task 3: Building a Feature-Rich System for Community Question Answering.</a> <span class="pub-venue">SemEval 2016 - First Place</span></div>
+    </section>
+
+    <footer>
+        Pepa Atanasova - University of Copenhagen
+    </footer>
+
+    <script>
+    function filterSelection(c) {
+        var x = document.getElementsByClassName("filterDiv");
+        var btns = document.querySelectorAll('.filters button');
+        btns.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (c == "all" || x[i].className.indexOf(c) > -1) {
+                x[i].style.display = "block";
+            }
+        }
+    }
+    </script>
 </body>
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var btnContainer1 = document.getElementById("myBtnContainer");
-    var btns1 = btnContainer1.getElementsByClassName("btn");
-    for (var j =0; j< btns1.length; j++){
-        btns1[j].className = btns1[j].className.replace(" active", "");
-    }
-
-    this.className += " active";
-  });
-}
-</script>
 </html>

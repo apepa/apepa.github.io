@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pepa Atanasova :: Contact</title>
-    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/live-resume.css">
-    <link rel="stylesheet" href="assets/css/custom-academic.css">
+    <title>Pepa Atanasova - Contact</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header { margin-bottom: 2rem; }
+        nav { margin-bottom: 1.5rem; }
+        nav a { margin-right: 1.5rem; color: #555; font-size: 0.9rem; }
+        nav a:hover, nav a.active { color: #000; }
+        .profile { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem; }
+        .profile img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+        .profile-info h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .profile-info p { color: #666; margin-bottom: 0.2rem; }
+        .social-links { margin-top: 0.5rem; }
+        .social-links a { margin-right: 1rem; color: #666; }
+        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.2rem; margin-bottom: 1rem; margin-top: 2rem; color: #000; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        section { margin-bottom: 1.5rem; }
+        p { margin-bottom: 0.8rem; }
+        .highlight { background: #f8f9fa; padding: 1rem; border-left: 3px solid #0066cc; margin-bottom: 1rem; }
+        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #888; font-size: 0.85rem; }
+        @media (max-width: 600px) {
+            nav a { display: inline-block; margin: 0.3rem 0.8rem 0.3rem 0; }
+            .profile { flex-direction: column; align-items: center; text-align: center; }
+            .profile img { width: 120px; height: 120px; }
+        }
+    </style>
 </head>
-
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="publications.html" class="nav-link">PUBLICATIONS</a>
-            <a href="teaching.html" class="nav-link">TEACHING</a>
-            <a href="service.html" class="nav-link">SERVICE</a>
-            <a href="talks.html" class="nav-link">TALKS</a>
-            <a href="https://www.copenlu.com/" class="nav-link">GROUP</a>
-            <a href="contact.html" class="nav-link active">CONTACT</a>
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="service.html">Service</a>
+            <a href="talks.html">Talks</a>
+            <a href="https://www.copenlu.com/">Group</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
-    <div class="content-wrapper">
-        <aside>
-            <div class="profile-img-wrapper">
-                <img src="assets/images/Profile.png" alt="profile">
+
+    <div class="profile">
+        <img src="assets/images/Profile.jpg" alt="Pepa Atanasova">
+        <div class="profile-info">
+            <h1>Pepa Atanasova</h1>
+            <p>Assistant Professor (Tenure Track)</p>
+            <p><a href="https://di.ku.dk/">Department of Computer Science</a></p>
+            <p><a href="http://www.copenlu.com/">CopeNLU Group</a></p>
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=CLOC3rEAAAAJ&hl=en">Scholar</a>
+                <a href="https://github.com/apepa/">GitHub</a>
+                <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/">LinkedIn</a>
+                <a href="mailto:pepa@di.ku.dk">Email</a>
+                <a href="CV_20_06_2025.pdf">CV</a>
             </div>
-            <h1 class="profile-name">Pepa Atanasova</h1>
-            <div class="text-center">
-                <span class="badge badge-white badge-pill profile-designation">Assistant Professor</span>
-                <span class="badge badge-white badge-pill profile-designation"><a href="http://www.copenlu.com/">CopeNLU group</a></span>
-                <span class="badge badge-white badge-pill profile-designation"><a href="https://di.ku.dk/">Department of Computer Science</a></span>
-            </div>
-            <nav class="social-links">
-                <a href="https://scholar.google.com/citations?user=CLOC3rEAAAAJ&hl=en" class="social-link"><i class="fab fa-scholar"></i></a>
-                <a href="https://www.linkedin.com/in/pepa-atanasova-65a2b417b/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/apepa/" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://orcid.org/0000-0002-0023-2616" class="social-link"><i class="fab fa-orcid"></i></a>
-                <a href="https://twitter.com/atanasovapepa" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://bsky.app/profile/apepa.bsky.social" class="social-link bluesky-link"><i class="fab fa-bluesky"></i></a>
-                <a></a>
-                <a href="mailto:pepa@di.ku.dk" class="social-link" title="Send email"><i class="fas fa-envelope"></i></a>
-            </nav>
-            <div class="text-center">
-                <a href="CV_20_06_2025.pdf" class="cv-download-btn" target="_blank">📄 Download CV</a>
-            </div>
-        </aside>
-        <main>
-            <section class="intro-section">
-                <h2 class="section-title">Contact & Collaboration</h2>
-        <br/>
-                <h3 class="section-subtitle">PhD Opportunities</h3>
-<!--                <h5>I am looking for a PhD student on Trustworthy NLP with a start date in March 2026! The successful candidate will co-supervised by <a href="https://isabelleaugenstein.github.io/">Prof. Isabelle Augenstein</a> and will join our <a href="http://www.copenlu.com/">CopeNLU group</a>. For more details see the <a href="https://candidate.hr-manager.net/ApplicationInit.aspx?cid=1307&ProjectId=164924&DepartmentId=18970&MediaId=5&IsAdPreviewRequest=true&AdvertisementId=118926">APPLICATION LINK.</a> See reasons to apply <a href="http://www.copenlu.com/post/why-ucph/">here.</a></h5>-->
-                <p><a href="https://ddsa.dk/fellowships/phdfellowshipcall2026/">DDSA PhD fellowships</a> were just open for application. Reach out if your're interested in applying with me.</p>
-
-                <h3 class="section-subtitle">Postdoctoral Opportunities</h3>
-                <p>Although I do not have open postdoc positions at this time, I am happy to support prospective postdocs who are interested in applying to fellowships such as the <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships">Marie Skłodowska-Curie Postdoctoral Fellowship (see mobility rules)</a>, <a href="https://villumfonden.dk/en/group/channel/villum-international-postdoc-2025">Villum International Postdoc (requirement for a Danish PhD degree)</a>. Please reach out with a draft research statement if you'd like to explore opportunities together. <br><i>If you're considering this, please, contact me early enough and no later than a month before the deadline. </i></p>
-                <p><a href="https://ddsa.dk/postdocfellowshipcall2026/">DDSA Postdoc fellowships</a> were just open for application. Reach out if your're interested in applying with me.</p>
-
-                <h3 class="section-subtitle">Visiting Opportunities</h3>
-                <p>Although I do not have direct funding for visitors, I am happy to support applications for <a href="https://ddsa.dk/visitgrant/">DDSA visiting grants</a>, which are particularly suitable if you would like to later apply for a DDSA PhD/Postdoc fellowship with me. Please reach out if you'd like to explore opportunities together.</p>
-
-
-                <h3 class="section-subtitle">Student Supervision</h3>
-                <p>I am happy to supervise Bachelor and Master students for their <i>thesis projects</i> at the <i>University of Copenhagen</i>. Get in touch if you’re interested in discussing potential thesis topics. Please, send a list of taken courses and grades with your introduction email.</p>
-
-                <h3 class="section-subtitle">Teaching Courses</h3>
-                <p>
-                I am currenly employed at the University of Copenhagen with specific teaching duties dedicated to teaching life-long learning courses. If you are a public or a private entity in Denmark that would like to learn more about Machine Learning and Language Models, Data Science, etc., please, reach out.
-                </p>
-            </section>
-            <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2022</footer>
-        </main>
+        </div>
     </div>
-    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/live-resume.js"></script>
-</body>
 
+    <h2>Contact & Opportunities</h2>
+
+    <h2>Opportunities</h2>
+    <div class="highlight">
+        <strong>Funded PhD and postdoc position available!</strong> I am a co-PI on a DFF-Research Project 2 grant for "A Mechanistic Framework for Mitigating the Susceptibility of LLMs to Learning False Information". See <a href="https://www.copenlu.com/news/funded-phd-and-postdoc-positions-for-start-in-autumn-2026/">more info and application details</a>.
+    </div>
+<!--    <p><a href="https://ddsa.dk/fellowships/phdfellowshipcall2026/">DDSA PhD fellowships</a> are open for application. Reach out if you're interested in applying with me.</p>-->
+
+    <h2>Postdoctoral Opportunities</h2>
+<!--    <div class="highlight">-->
+<!--        <strong>Funded Postdoc position available!</strong> I received a DFF-Research Project 2 grant for "A Mechanistic Framework for Mitigating the Susceptibility of LLMs to Learning False Information". See <a href="https://www.copenlu.com/news/funded-phd-and-postdoc-positions-for-start-in-autumn-2026/">more info and application details</a>.-->
+<!--    </div>-->
+    <p>I am interested in supporting prospective postdocs for fellowships such as the <a href="https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships">Marie Skłodowska-Curie Postdoctoral Fellowship</a> or <a href="https://villumfonden.dk/en/group/channel/villum-international-postdoc-2025">Villum International Postdoc</a>. Please, reach out with a draft research statement if you'd like to explore opportunities together.</p>
+    <p><em>If you're considering this, please contact me early enough and no later than a month before the deadline.</em></p>
+<!--    <p><a href="https://ddsa.dk/postdocfellowshipcall2026/">DDSA Postdoc fellowships</a> are open for application. Reach out if you're interested in applying with me.</p>-->
+
+    <h2>Visiting Opportunities</h2>
+    <p>Although I do not have direct funding for visitors, I am happy to support applications for <a href="https://ddsa.dk/visitgrant/">DDSA visiting grants</a>, which are particularly suitable if you would like to later apply for a DDSA PhD/Postdoc fellowship with me.</p>
+    There are also potential opportunities for funding of visits of senior researchers.
+
+    <h2>Student Supervision</h2>
+    <p>I am happy to supervise Bachelor and Master students for their thesis projects at the University of Copenhagen. Get in touch if you're interested in discussing potential thesis topics. <i>Please, send a list of taken courses and grades with your introduction email.</i></p>
+
+    <h2>Teaching Courses</h2>
+    <p>I am currently employed at the University of Copenhagen with specific teaching duties dedicated to life-long learning courses. If you are a public or private entity in Denmark that would like to learn more about Machine Learning, Language Models, Data Science, etc., please reach out.</p>
+
+    <footer>
+        Pepa Atanasova - University of Copenhagen
+    </footer>
+</body>
 </html>
